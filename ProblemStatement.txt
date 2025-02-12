@@ -1,0 +1,29 @@
+A machine component experienced multiple deformations following extended usage.
+Utilizing a sensor, the component&#39;s shape was digitally reconstructed and represented
+as a collection of points that define its surface.
+These points are stored in the file &quot;3d_shape_points_data.npz&quot;.
+Your task is as follows:
+- Determine the original shape of the object.
+- Identify the deformations present in the component.
+- Reconstruct the original shape by correcting the deformations.
+
+
+Libraries Used
+- Numpy : Used to load .npz flies that store the data in Array format
+- MatplotLib : Plotting/vizualising graphs
+- mpl_toolkits.mplot3d : Helper function to matplotlib to plot 3D objects
+- skelear.decomposition PCA : To find the directions of variations
+- open3d : Library used for handling/processing 3D points.
+
+Process Followed
+1. Loading the data points.
+2. 3D plot [x,y,z] to initially visualize.
+3. PCA to find the deviations of the axes.
+4. Converting the visualized points to open3d's utility Array.
+5. Removing outliers.
+6. voxeling the size for proper view.
+
+
+Prompts Used
+1. Explain me in mathematical procedure of PCA considering an example. - To revamp the knowledge
+2. Methods to remove noise using open3d or anyother methods for more better visualization.
